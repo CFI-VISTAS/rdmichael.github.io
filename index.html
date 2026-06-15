@@ -50,6 +50,23 @@
       align-items: end;
     }
 
+    .identity {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .profile-photo {
+      width: clamp(112px, 14vw, 156px);
+      aspect-ratio: 1;
+      flex: 0 0 auto;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: var(--panel);
+    }
+
     .eyebrow {
       margin: 0 0 10px;
       color: var(--accent-2);
@@ -224,9 +241,24 @@
         grid-template-columns: 1fr;
       }
 
+      .identity {
+        align-items: flex-start;
+      }
+
       nav {
         position: static;
         max-height: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .identity {
+        display: grid;
+        gap: 16px;
+      }
+
+      .profile-photo {
+        width: 128px;
       }
     }
 
@@ -247,7 +279,10 @@
     <div class="page hero">
       <div>
         <p class="eyebrow">Curriculum Vitae</p>
-        <h1>R. Dinakaran Michael</h1>
+        <div class="identity">
+          <img class="profile-photo" src="Dinakaran-Michael.jpg" alt="Portrait of R. Dinakaran Michael">
+          <h1>R. Dinakaran Michael</h1>
+        </div>
         <p class="subtitle">Fish immunology researcher, educator, and former Dean of Life Sciences with more than four decades of teaching and research leadership.</p>
       </div>
       <address class="contact">
