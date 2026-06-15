@@ -117,6 +117,63 @@
       letter-spacing: 0.08em;
     }
 
+    .manual-feature {
+      display: grid;
+      grid-template-columns: 132px minmax(0, 1fr);
+      gap: 20px;
+      align-items: center;
+      margin-top: 24px;
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .manual-feature a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .manual-thumb {
+      display: block;
+      width: 132px;
+      aspect-ratio: 0.74;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    .manual-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .manual-copy strong {
+      display: block;
+      color: var(--accent-2);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .manual-copy h2 {
+      margin: 6px 0 8px;
+      padding: 0;
+      border: 0;
+      font-size: 1.25rem;
+    }
+
+    .manual-copy p {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .metrics {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -351,6 +408,15 @@
       .profile-photo {
         width: 128px;
       }
+
+      .manual-feature {
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .manual-thumb {
+        width: 96px;
+      }
     }
 
     @media print {
@@ -382,6 +448,16 @@
         <span><strong>Google Scholar</strong><a href="https://scholar.google.com/citations?user=4YPwzIMAAAAJ&hl=en">Scholar profile</a></span>
         <span><strong>Scopus</strong><a href="https://www.scopus.com/authid/detail.uri?authorId=7102954651">Author ID 7102954651</a></span>
       </address>
+    </div>
+    <div class="page manual-feature">
+      <a class="manual-thumb" href="Manual_Flyer.pdf" target="_blank" rel="noopener" aria-label="Open Immunological Techniques Using Fish Model flyer in a new tab">
+        <img src="Manual_Flyer_thumb.jpg" alt="Thumbnail of Immunological Techniques Using Fish Model flyer">
+      </a>
+      <div class="manual-copy">
+        <strong>Featured manual</strong>
+        <h2><a href="Manual_Flyer.pdf" target="_blank" rel="noopener">Immunological Techniques Using Fish Model</a></h2>
+        <p>Laboratory manual flyer. Click the thumbnail or title to open the PDF in a new tab.</p>
+      </div>
     </div>
     <div class="page metrics" aria-label="Research metrics">
       <div class="metric"><b>53</b><span>Indexed journal publications</span></div>
